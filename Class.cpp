@@ -79,3 +79,11 @@ List::Node::Node(string par, string val, Node* pNext) {
 	this->pNext = pNext;
 }
 
+void List::Print(){
+	Node* current = this->head;
+	while (current != nullptr) {
+		cout << current->par << " = " << current->val << endl;
+		current = current->pNext;
+	}
+}
+
