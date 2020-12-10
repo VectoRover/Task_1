@@ -17,6 +17,7 @@ public:
 	void push_back(string par, string val);
 	void clear();
 	int GetSize();
+	void Print();
 	string& operator[](const string par);
 	string& operator[](const int index);
 
