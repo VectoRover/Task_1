@@ -16,15 +16,15 @@ void prepr(ifstream* filename, List *lst, string name) {
     fout.close();
 }
 
-void sprtr(string* str, int num, List *lst, string name) {    //принимаем в обработку строку
+void sprtr(string* str, int num, List *lst, string name) {    //ГЇГ°ГЁГ­ГЁГ¬Г ГҐГ¬ Гў Г®ГЎГ°Г ГЎГ®ГІГЄГі Г±ГІГ°Г®ГЄГі
 
 
-    stringstream str_stream;     //превращаем строку в поток, чтобы иметь возможность пользоваться getline
+    stringstream str_stream;     //ГЇГ°ГҐГўГ°Г Г№Г ГҐГ¬ Г±ГІГ°Г®ГЄГі Гў ГЇГ®ГІГ®ГЄ, Г·ГІГ®ГЎГ» ГЁГ¬ГҐГІГј ГўГ®Г§Г¬Г®Г¦Г­Г®Г±ГІГј ГЇГ®Г«ГјГ§Г®ГўГ ГІГјГ±Гї getline
     str_stream << *str;
     string str1, tmpstr_name, tmpstr_value;
-    bool ok_1 = 0; //если значение 1, то имя параметра в строке найдено
-    bool ok_2 = 0; // знак "=" найден
-    bool ok_3 = 0; // значение параметра найдено
+    bool ok_1 = 0; //ГҐГ±Г«ГЁ Г§Г­Г Г·ГҐГ­ГЁГҐ 1, ГІГ® ГЁГ¬Гї ГЇГ Г°Г Г¬ГҐГІГ°Г  Гў Г±ГІГ°Г®ГЄГҐ Г­Г Г©Г¤ГҐГ­Г®
+    bool ok_2 = 0; // Г§Г­Г ГЄ "=" Г­Г Г©Г¤ГҐГ­
+    bool ok_3 = 0; // Г§Г­Г Г·ГҐГ­ГЁГҐ ГЇГ Г°Г Г¬ГҐГІГ°Г  Г­Г Г©Г¤ГҐГ­Г®
 
     while (!str_stream.eof()) {
         getline(str_stream, str1, ' ');
@@ -78,9 +78,10 @@ void start() {
 
 void mnplt_review(List *lst) {
     cout << "Spisok nastroek" << endl;
-    for (int i = 0; i < (*lst).GetSize(); i++) {
+   /* for (int i = 0; i < (*lst).GetSize(); i++) {
         cout << (*lst)[i] << " = " << (*lst)[(*lst)[i]] << endl;
-    }
+    }*/
+    (*lst).Print();
 }
 
 void open_file(List *lst) {
